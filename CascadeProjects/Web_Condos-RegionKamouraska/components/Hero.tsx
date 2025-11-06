@@ -1,17 +1,11 @@
-import Image from "next/image";
 import Link from "next/link";
 
 export function Hero() {
   return (
     <section className="relative min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh] flex items-center">
-      <Image
+      <img
         src="/images/cabain.JPG"
-        alt="Paisaje de Kamouraska"
-        fill
-        priority
-        sizes="100vw"
-        quality={85}
-        className="object-cover"
+        className="object-cover absolute inset-0 w-full h-full"
         style={{ objectPosition: "center 60%" }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 md:from-black/50 to-black/10" />

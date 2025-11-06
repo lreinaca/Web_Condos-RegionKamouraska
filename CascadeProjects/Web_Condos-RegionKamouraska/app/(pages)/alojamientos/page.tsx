@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 
 const units = [
@@ -41,8 +40,8 @@ export default function AlojamientoPage() {
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {units.map((u) => (
             <article key={u.slug} className="bg-white rounded-lg overflow-hidden shadow-sm border">
-              <div className="relative h-56">
-                <Image src={u.image} alt={u.name} fill className="object-cover" />
+                <div className="relative h-56">
+                <img src={u.image} className="object-cover absolute inset-0 w-full h-full" />
               </div>
               <div className="p-5">
                 <h3 className="h3 mb-1">{u.name}</h3>
