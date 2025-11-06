@@ -1,0 +1,17 @@
+{
+  // Nombre del Worker (cámbialo a algo único)
+  "name": "mi-worker",
+
+  // Archivo de entrada de tu Worker. Cambia esta ruta al archivo real
+  // que contiene tu Worker (por ejemplo: "src/index.ts" o "workers/index.js").
+  "main": "src/index.ts",
+
+  // Fecha de compatibilidad (usa la fecha actual o una fecha soportada)
+  "compatibility_date": "2025-11-05",
+
+  // Despliega al entorno workers.dev para pruebas rápidas
+  "workers_dev": true,
+
+  // Variables de entorno (opcional)
+  "vars": {}
+}
