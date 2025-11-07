@@ -1,5 +1,6 @@
-import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import translations from "@/lib/i18n";
 
 const units = [
   {
@@ -32,17 +33,25 @@ const units = [
 ];
 
 export default function AlojamientoPage() {
+  const [t, setT] = useState(translations['es']);
+  useEffect(() => {
+    const path = typeof window !== 'undefined' ? window.location.pathname : '/';
+    const seg = path.split('/').filter(Boolean);
+    const locale = seg[0] && translations[seg[0]] ? seg[0] : 'es';
+    setT(translations[locale]);
+  }, []);
+
   return (
     <main className="section">
       <div className="safe-max">
-        <h1 className="h2 mb-2">Alojamientos</h1>
-        <p className="p mb-10 max-w-2xl">Cabañas y condos diseñados para el descanso, con materiales naturales, luz cálida y detalles que invitan a bajar el ritmo.</p>
+        <h1 className="h2 mb-2">{t.alojamientos.title}</h1>
+        <p className="p mb-10 max-w-2xl">{t.alojamientos.description}</p>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {units.map((u) => (
             <article key={u.slug} className="bg-white rounded-lg overflow-hidden shadow-sm border">
-              <div className="relative h-56">
-                <Image src={u.image} alt={u.name} fill className="object-cover" />
+                <div className="relative h-56">
+                <img src={u.image} className="object-cover absolute inset-0 w-full h-full" />
               </div>
               <div className="p-5">
                 <h3 className="h3 mb-1">{u.name}</h3>
