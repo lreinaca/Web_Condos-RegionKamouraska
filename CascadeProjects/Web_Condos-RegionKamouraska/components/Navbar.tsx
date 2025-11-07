@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 export function Navbar() {
   return (
@@ -12,7 +13,10 @@ export function Navbar() {
           <Link href="/nosotros">Nosotros</Link>
           <Link href="/contacto" className="btn">Reservar</Link>
         </div>
-        <Link href="/contacto" className="sm:hidden btn">Reservar</Link>
+        <div className="flex items-center gap-4">
+          <LanguageSwitcher />
+          <Link href="/contacto" className="sm:hidden btn">Reservar</Link>
+        </div>
       </nav>
     </header>
   );
