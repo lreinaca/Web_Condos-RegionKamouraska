@@ -3,13 +3,16 @@ import { useEffect, useState } from "react";
 import translations from "@/lib/i18n";
 
 export function Hero() {
-  const [t, setT] = useState(translations['es']);
+  const [t, setT] = useState<any>(null);
   useEffect(() => {
-    const path = typeof window !== 'undefined' ? window.location.pathname : '/';
-    const seg = path.split('/').filter(Boolean);
-    const locale = seg[0] && translations[seg[0]] ? seg[0] : 'es';
-    setT(translations[locale]);
+    const params = new URLSearchParams(window.location.search);
+    const lng = params.get('lng') || 'es';
+    import('@/lib/i18n').then((mod) => {
+      const map = mod.default || mod.translations || {};
+      setT(map[lng] || map['es']);
+    });
   }, []);
+  if (!t) return null;
   return (
     <section className="relative min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh] flex items-center">
       <img
