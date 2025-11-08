@@ -12,6 +12,7 @@ const units = [
     features: ["Vistas al río", "Terraza privada", "Cocina equipada"],
     image:
       "https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1470&auto=format&fit=crop",
+    alt: "Cabaña con vistas al río en Kamouraska",
   },
   {
     name: "Condo Bosque",
@@ -21,6 +22,7 @@ const units = [
     features: ["Rodeado de pinos", "Chimenea", "Área de lectura"],
     image:
       "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1469&auto=format&fit=crop",
+    alt: "Condo en medio del bosque con chimenea",
   },
   {
     name: "Cabaña Horizonte",
@@ -30,6 +32,7 @@ const units = [
     features: ["Vistas abiertas", "Baño spa", "Desayuno local"],
     image:
       "https://images.unsplash.com/photo-1523419409543-8c4f62b63ca3?q=80&w=1470&auto=format&fit=crop",
+    alt: "Cabaña con horizonte despejado y baño spa",
   },
 ];
 
@@ -55,7 +58,17 @@ export default function AlojamientoPage() {
           {units.map((u) => (
             <article key={u.slug} className="bg-white rounded-lg overflow-hidden shadow-sm border">
                 <div className="relative h-56">
-                <img src={u.image} className="object-cover absolute inset-0 w-full h-full" />
+                <picture>
+                  <source type="image/webp" srcSet={u.image.replace('auto=format', 'fm=webp')} />
+                  <img
+                    src={u.image}
+                    alt={u.alt || u.name}
+                    className="object-cover absolute inset-0 w-full h-full"
+                    width={1470}
+                    height={980}
+                    loading="lazy"
+                  />
+                </picture>
               </div>
               <div className="p-5">
                 <h3 className="h3 mb-1">{u.name}</h3>

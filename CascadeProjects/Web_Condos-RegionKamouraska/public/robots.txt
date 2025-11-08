@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://condos-region-kamouraska.pages.dev/sitemap.xml

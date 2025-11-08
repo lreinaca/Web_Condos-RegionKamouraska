@@ -16,6 +16,42 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="es">
       <head>
+        {/* Primary metadata & social */}
+        <link rel="canonical" href="https://condos-region-kamouraska.pages.dev/" />
+        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+        <meta property="og:title" content="Cabañas Kamouraska | Naturaleza, calma y comodidad" />
+        <meta property="og:description" content="Escapadas boutique en Kamouraska, Quebec. Cabañas y condos con vistas, naturaleza y descanso." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://condos-region-kamouraska.pages.dev/" />
+        <meta property="og:image" content="/images/cabain.JPG" />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Cabañas Kamouraska | Naturaleza, calma y comodidad" />
+        <meta name="twitter:description" content="Escapadas boutique en Kamouraska, Quebec. Cabañas y condos con vistas, naturaleza y descanso." />
+        <meta name="twitter:image" content="/images/cabain.JPG" />
+
+        {/* JSON-LD structured data: LodgingBusiness */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LodgingBusiness",
+              "name": "Cabañas Kamouraska",
+              "url": "https://condos-region-kamouraska.pages.dev/",
+              "logo": "https://condos-region-kamouraska.pages.dev/images/cabain.JPG",
+              "description": "Escapadas boutique en Kamouraska, Quebec. Cabañas y condos con vistas, naturaleza y descanso.",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Kamouraska",
+                "addressRegion": "QC",
+                "addressCountry": "CA"
+              }
+            })
+          }}
+        />
+
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
