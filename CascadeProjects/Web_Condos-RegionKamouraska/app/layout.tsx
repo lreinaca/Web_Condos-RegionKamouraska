@@ -7,6 +7,9 @@ export const metadata = {
   title: "Cabañas Kamouraska | Naturaleza, calma y comodidad",
   description:
     "Escapadas boutique en Kamouraska, Quebec. Cabañas y condos con vistas, naturaleza y descanso.",
+  verificacion: {
+    google: "XD3QfLHe1fHWGMs7GNLaOBkBIFEA9mAb0tg-rTzQl2M"
+  }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
