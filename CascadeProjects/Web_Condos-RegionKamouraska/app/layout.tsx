@@ -25,6 +25,16 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* End Google Tag Manager */}
       </head>
       <body>
+        {/* Google Tag Manager (noscript) - fallback for users with JS disabled */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-TT5QD6M8"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
         <Navbar />
         {children}
         <CTASticky />
