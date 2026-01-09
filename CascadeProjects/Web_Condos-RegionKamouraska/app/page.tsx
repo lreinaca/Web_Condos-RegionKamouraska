@@ -14,8 +14,8 @@ export default function HomePage() {
       </section>
       <section className="section bg-white">
         <div className="safe-max">
-          <h2 className="h2 mb-6">Postales de Kamouraska</h2>
-          <p className="p mb-8 max-w-2xl">Naturaleza, río y cielo abierto. Una selección de imágenes para inspirarte antes de tu escapada.</p>
+          <h2 className="h2 mb-6">Cartes postales de Kamouraska</h2>
+          <p className="p mb-8 max-w-2xl">Nature, fleuve et ciel ouvert. Une sélection d'images pour vous inspirer avant votre escapade.</p>
           <Carousel />
         </div>
       </section>

@@ -1,58 +1,45 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import translations from "@/lib/i18n";
 
 const units = [
   {
-    name: "Cabaña Río",
-    slug: "cabana-rio",
-    capacity: "2-3 huéspedes",
-    price: "desde $160/noche",
-    features: ["Vistas al río", "Terraza privada", "Cocina equipada"],
+    name: "Chalet Rivière",
+    slug: "chalet-riviere",
+    capacity: "2-3 personnes",
+    price: "à partir de 160 $/nuit",
+    features: ["Vue sur le fleuve", "Terrasse privée", "Cuisine équipée"],
     image:
       "https://images.unsplash.com/photo-1501183638710-841dd1904471?q=80&w=1470&auto=format&fit=crop",
-    alt: "Cabaña con vistas al río en Kamouraska",
+    alt: "Chalet avec vue sur le fleuve à Kamouraska",
   },
   {
-    name: "Condo Bosque",
-    slug: "condo-bosque",
-    capacity: "4 huéspedes",
-    price: "desde $190/noche",
-    features: ["Rodeado de pinos", "Chimenea", "Área de lectura"],
+    name: "Condo Forêt",
+    slug: "condo-foret",
+    capacity: "4 personnes",
+    price: "à partir de 190 $/nuit",
+    features: ["Entouré de pins", "Foyer", "Coin lecture"],
     image:
       "https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=1469&auto=format&fit=crop",
-    alt: "Condo en medio del bosque con chimenea",
+    alt: "Condo au milieu de la forêt avec foyer",
   },
   {
-    name: "Cabaña Horizonte",
-    slug: "cabana-horizonte",
-    capacity: "2 huéspedes",
-    price: "desde $170/noche",
-    features: ["Vistas abiertas", "Baño spa", "Desayuno local"],
+    name: "Chalet Horizon",
+    slug: "chalet-horizon",
+    capacity: "2 personnes",
+    price: "à partir de 170 $/nuit",
+    features: ["Vue dégagée", "Bain spa", "Déjeuner local"],
     image:
       "https://images.unsplash.com/photo-1523419409543-8c4f62b63ca3?q=80&w=1470&auto=format&fit=crop",
-    alt: "Cabaña con horizonte despejado y baño spa",
+    alt: "Chalet avec horizon dégagé et bain spa",
   },
 ];
 
 export default function AlojamientoPage() {
-  const [t, setT] = useState<any>(null);
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const lng = params.get('lng') || 'es';
-    import('@/lib/i18n').then((mod) => {
-      const map = mod.default || mod.translations || {};
-      setT(map[lng] || map['es']);
-    });
-  }, []);
-  if (!t) return null;
-
   return (
     <main className="section">
       <div className="safe-max">
-        <h1 className="h2 mb-2">{t.alojamientos.title}</h1>
-        <p className="p mb-10 max-w-2xl">{t.alojamientos.description}</p>
+        <h1 className="h2 mb-2">Hébergement</h1>
+        <p className="p mb-10 max-w-2xl">Chalets et condos conçus pour le repos, avec des matériaux naturels, une lumière chaleureuse et des détails qui invitent au ralentissement.</p>
 
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {units.map((u) => (
@@ -79,8 +66,8 @@ export default function AlojamientoPage() {
                   ))}
                 </ul>
                 <div className="flex gap-3">
-                  <Link href="/contacto" className="btn">Reservar</Link>
-                  <Link href={`#`} className="btn-outline">Ver detalles</Link>
+                  <Link href="/contacto" className="btn">Réserver</Link>
+                  <Link href={`#`} className="btn-outline">Voir détails</Link>
                 </div>
               </div>
             </article>

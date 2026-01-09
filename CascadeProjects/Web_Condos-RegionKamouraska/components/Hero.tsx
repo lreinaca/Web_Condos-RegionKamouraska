@@ -1,19 +1,7 @@
 "use client";
 import Link from "next/link";
-import { useEffect, useState } from "react";
-import translations from "@/lib/i18n";
 
 export function Hero() {
-  const [t, setT] = useState<any>(null);
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const lng = params.get('lng') || 'es';
-    import('@/lib/i18n').then((mod) => {
-      const map = mod.default || mod.translations || {};
-      setT(map[lng] || map['es']);
-    });
-  }, []);
-  if (!t) return null;
   return (
     <section className="relative min-h-[80vh] md:min-h-[85vh] lg:min-h-[90vh] flex items-center">
       <img
@@ -24,11 +12,11 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 md:from-black/50 to-black/10" />
       <div className="safe-max relative">
         <div className="max-w-2xl text-white pt-24">
-          <h1 className="h1 mb-4">{t.hero.title}</h1>
-          <p className="p text-white/90 mb-8">{t.hero.subtitle}</p>
+          <h1 className="h1 mb-4">Déconnectez à Kamouraska</h1>
+          <p className="p text-white/90 mb-8">Nature, calme et confort dans des chalets et condos avec vue sur le Saint-Laurent.</p>
           <div className="flex gap-4">
-            <Link href="/alojamientos" className="btn bg-white text-gray-900 hover:bg-gray-100">{t.hero.cta1}</Link>
-            <Link href="/contacto" className="btn-outline border-white text-white hover:bg-white/10">{t.hero.cta2}</Link>
+            <Link href="/alojamientos" className="btn bg-white text-gray-900 hover:bg-gray-100">Voir les logements</Link>
+            <Link href="/contacto" className="btn-outline border-white text-white hover:bg-white/10">Réserver</Link>
           </div>
         </div>
       </div>

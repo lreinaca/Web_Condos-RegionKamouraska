@@ -1,7 +1,7 @@
 const items = [
-  { name: "María", text: "Una calma increíble. Despertar con el río fue inolvidable." },
-  { name: "Javier", text: "Diseño cuidado y silencio total. Volveremos." },
-  { name: "Ana", text: "Perfecto para recargar energías y desconectar del ruido." },
+  { name: "Marie", text: "Un calme incroyable. Se réveiller avec le fleuve était inoubliable." },
+  { name: "Jean", text: "Design soigné et silence total. Nous reviendrons." },
+  { name: "Anne", text: "Parfait pour recharger ses batteries et se déconnecter du bruit." },
 ];
 
 export function Testimonials() {

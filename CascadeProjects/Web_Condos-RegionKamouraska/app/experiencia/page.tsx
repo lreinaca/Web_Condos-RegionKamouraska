@@ -11,33 +11,33 @@ export default function ExperienciaPage() {
   return (
     <main className="section">
       <div className="safe-max">
-        <h1 className="h2 mb-2">Kamouraska: calma y horizonte</h1>
-        <p className="p max-w-2xl mb-10">Costa del San Lorenzo, cielos infinitos y gastronomía local. Senderos, kayak, miradores y noches de estrellas. Aquí el tiempo corre distinto.</p>
+        <h1 className="h2 mb-2">Kamouraska : calme et horizon</h1>
+        <p className="p max-w-2xl mb-10">Côte du Saint-Laurent, ciels infinis et gastronomie locale. Sentiers, kayak, points de vue et nuits étoilées. Ici, le temps passe différemment.</p>
 
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {photos.map((src, i) => (
             <div key={i} className="relative h-64 rounded-md overflow-hidden">
-              <Image src={src} alt="Entorno de Kamouraska" fill className="object-cover" />
+              <Image src={src} alt="Environnement de Kamouraska" fill className="object-cover" />
             </div>
           ))}
         </div>
 
         <div className="mt-12 grid gap-6 sm:grid-cols-2">
           <div className="bg-white p-6 rounded-lg border">
-            <h3 className="h3 mb-2">Actividades</h3>
+            <h3 className="h3 mb-2">Activités</h3>
             <ul className="list-disc pl-5 text-gray-700">
-              <li>Senderismo costero y miradores</li>
-              <li>Kayak y paseos al atardecer</li>
-              <li>Productos locales y cafés de pueblo</li>
-              <li>Observación de estrellas</li>
+              <li>Randonnée côtière et points de vue</li>
+              <li>Kayak et promenades au coucher du soleil</li>
+              <li>Produits locaux et cafés de village</li>
+              <li>Observation des étoiles</li>
             </ul>
           </div>
           <div className="bg-white p-6 rounded-lg border">
-            <h3 className="h3 mb-2">Consejos</h3>
+            <h3 className="h3 mb-2">Conseils</h3>
             <ul className="list-disc pl-5 text-gray-700">
-              <li>Trae calzado cómodo y capa para el viento</li>
-              <li>Reserva actividades con antelación en temporada alta</li>
-              <li>Respeta flora y fauna; llevamos un enfoque sostenible</li>
+              <li>Apportez des chaussures confortables et une veste coupe-vent</li>
+              <li>Réservez les activités à l'avance en haute saison</li>
+              <li>Respectez la flore et la faune ; nous avons une approche durable</li>
             </ul>
           </div>
         </div>

@@ -4,9 +4,9 @@ import { Footer } from "@/components/Footer";
 import { CTASticky } from "@/components/CTASticky";
 
 export const metadata = {
-  title: "Cabañas Kamouraska | Naturaleza, calma y comodidad",
+  title: "Chalets Kamouraska | Nature, calme et confort",
   description:
-    "Escapadas boutique en Kamouraska, Quebec. Cabañas y condos con vistas, naturaleza y descanso.",
+    "Escapades boutique à Kamouraska, Québec. Chalets et condos avec vue, nature et repos.",
   verification: {
     google: "XD3QfLHe1fHWGMs7GNLaOBkBIFEA9mAb0tg-rTzQl2M"
   }
@@ -14,21 +14,21 @@ export const metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="fr-CA">
       <head>
         {/* Primary metadata & social */}
         <link rel="canonical" href="https://condos-region-kamouraska.pages.dev/" />
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
-        <meta property="og:title" content="Cabañas Kamouraska | Naturaleza, calma y comodidad" />
-        <meta property="og:description" content="Escapadas boutique en Kamouraska, Quebec. Cabañas y condos con vistas, naturaleza y descanso." />
+        <meta property="og:title" content="Chalets Kamouraska | Nature, calme et confort" />
+        <meta property="og:description" content="Escapades boutique à Kamouraska, Québec. Chalets et condos avec vue, nature et repos." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content="https://condos-region-kamouraska.pages.dev/" />
         <meta property="og:image" content="/images/cabain.JPG" />
 
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Cabañas Kamouraska | Naturaleza, calma y comodidad" />
-        <meta name="twitter:description" content="Escapadas boutique en Kamouraska, Quebec. Cabañas y condos con vistas, naturaleza y descanso." />
+        <meta name="twitter:title" content="Chalets Kamouraska | Nature, calme et confort" />
+        <meta name="twitter:description" content="Escapades boutique à Kamouraska, Québec. Chalets et condos avec vue, nature et repos." />
         <meta name="twitter:image" content="/images/cabain.JPG" />
 
         {/* JSON-LD structured data: LodgingBusiness */}
@@ -38,10 +38,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LodgingBusiness",
-              "name": "Cabañas Kamouraska",
+              "name": "Chalets Kamouraska",
               "url": "https://condos-region-kamouraska.pages.dev/",
               "logo": "https://condos-region-kamouraska.pages.dev/images/cabain.JPG",
-              "description": "Escapadas boutique en Kamouraska, Quebec. Cabañas y condos con vistas, naturaleza y descanso.",
+              "description": "Escapades boutique à Kamouraska, Québec. Chalets et condos avec vue, nature et repos.",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "Kamouraska",

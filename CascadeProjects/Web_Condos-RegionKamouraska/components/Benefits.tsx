@@ -1,10 +1,10 @@
 import { Mountain, Trees, CookingPot, Waves } from "lucide-react";
 
 const items = [
-  { icon: Waves, title: "Vistas al río", text: "Horizonte abierto sobre el San Lorenzo." },
-  { icon: CookingPot, title: "Cocina equipada", text: "Todo lo necesario para comidas sencillas." },
-  { icon: Trees, title: "Naturaleza", text: "Bosques, senderos y aire puro." },
-  { icon: Mountain, title: "Desconexión", text: "Silencio, lectura y descanso profundo." },
+  { icon: Waves, title: "Vue sur le fleuve", text: "Horizon ouvert sur le Saint-Laurent." },
+  { icon: CookingPot, title: "Cuisine équipée", text: "Tout le nécessaire pour des repas simples." },
+  { icon: Trees, title: "Nature", text: "Forêts, sentiers et air pur." },
+  { icon: Mountain, title: "Déconnexion", text: "Silence, lecture et repos profond." },
 ];
 
 export function Benefits() {
