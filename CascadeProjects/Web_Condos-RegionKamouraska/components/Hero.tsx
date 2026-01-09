@@ -12,7 +12,7 @@ export function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/60 md:from-black/50 to-black/10" />
       <div className="safe-max relative">
         <div className="max-w-2xl text-white pt-24">
-          <h1 className="h1 mb-4">Déconnectez à Kamouraska</h1>
+          <h1 className="h1 mb-4">Vue et nature sur le Lac Saint-Pierre</h1>
           <p className="p text-white/90 mb-8">Nature, calme et confort dans des chalets et condos avec vue sur le Saint-Laurent.</p>
           <div className="flex gap-4">
             <Link href="/alojamientos" className="btn bg-white text-gray-900 hover:bg-gray-100">Voir les logements</Link>
