@@ -2,6 +2,7 @@ import "./globals.css";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 import { CTASticky } from "@/components/CTASticky";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 export const metadata = {
   title: "Chalets Kamouraska | Nature, calme et confort",
@@ -74,6 +75,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         {children}
         <CTASticky />
+        <WhatsAppButton />
         <Footer />
       </body>
     </html>

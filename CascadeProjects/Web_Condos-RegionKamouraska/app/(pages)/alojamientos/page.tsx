@@ -45,24 +45,36 @@ export default function AlojamientoPage() {
         <p className="p mb-10 max-w-2xl">Condos conçus pour le repos, avec des matériaux naturels, une lumière chaleureuse et des détails qui invitent au ralentissement.</p>
 
         <div className="grid gap-8 lg:grid-cols-1 max-w-4xl mx-auto">
-          {units.map((u) => (
-            <article key={u.slug} className="bg-white rounded-lg overflow-hidden shadow-sm border lg:flex lg:flex-row">
-              <div className="relative lg:w-2/5 h-64 lg:h-auto">
+          {units.map((u, index) => (
+            <article 
+              key={u.slug} 
+              className="bg-white rounded-lg overflow-hidden shadow-sm border lg:flex lg:flex-row hover:shadow-xl transition-all duration-300 animate-fade-in-up group"
+              style={{animationDelay: `${index * 0.1}s`}}
+            >
+              <div className="relative lg:w-2/5 h-64 lg:h-auto overflow-hidden">
                 <picture>
                   <source type="image/webp" srcSet={u.image.replace('auto=format', 'fm=webp')} />
                   <img
                     src={u.image}
                     alt={u.alt || u.name}
-                    className="object-cover absolute inset-0 w-full h-full"
+                    className="object-cover absolute inset-0 w-full h-full hover-zoom"
                     width={1470}
                     height={980}
                     loading="lazy"
                   />
                 </picture>
+                <div className="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-sm font-medium text-forest-700 shadow-lg">
+                  {u.price}
+                </div>
               </div>
               <div className="p-6 lg:w-3/5">
-                <h3 className="h3 mb-2">{u.name}</h3>
-                <p className="text-sm text-gray-600 mb-3">{u.capacity} • {u.price}</p>
+                <h3 className="h3 mb-2 group-hover:text-forest-600 transition-colors">{u.name}</h3>
+                <p className="text-sm text-gray-600 mb-3 flex items-center gap-2">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                  </svg>
+                  {u.capacity}
+                </p>
                 <p className="text-gray-700 mb-4 leading-relaxed">{u.description}</p>
                 <ul className="text-sm text-gray-700 mb-5 grid grid-cols-2 gap-2">
                   {u.features.map((f) => (
